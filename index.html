@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealership</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f4a7b9;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #0099cc; /* Baby blue color */
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background-color: #bababa;
+            color: #fff;
+        }
+
+        .container {
+            width: 80%;
+            margin:auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Car Dealership</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#cars">Cars</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>Welcome to our Car Dealership</h2>
+            <p>Discover the best deals on new and used cars!</p>
+        </section>
+
+        <section id="cars">
+            <h2>Our Cars</h2>
+            <div class="car">
+                <h3>Car Name</h3>
+                <img src="car.jpg" alt="Car Image">
+                <p>Description of the car goes here.</p>
+                <p>Price: $XX,XXX</p>
+            </div>
+            <div class="car">
+                <h3>Another Car Name</h3>
+                <img src="car.jpg" alt="Car Image">
+                <p>Description of another car goes here.</p>
+                <p>Price: $XX,XXX</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Learn more about our dealership and our commitment to quality and service.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us to schedule a test drive or ask any questions.</p>
+            <p>Email: info@cardealership.com</p>
+            <p>Phone: 123-456-7890</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Car Dealership. All rights reserved.</p>
+    </footer>
+
+    <script>
+        //Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
